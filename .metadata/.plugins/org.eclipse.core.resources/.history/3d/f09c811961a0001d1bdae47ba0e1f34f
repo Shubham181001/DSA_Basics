@@ -1,0 +1,50 @@
+package recursion_again;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class LinearSearch {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		
+		int[] arr = new int[n];
+		
+		for(int i = 0; i <= arr.length - 1; i++) {
+			arr[i] = sc.nextInt();
+		}
+		int target = sc.nextInt();
+//		int ans = linSearch(arr, target);
+//		System.out.println(ans);
+		findAllIndices(arr, target, 0);
+		System.out.println(list);
+	}
+	
+	static int linSearch(int[] arr, int target) {
+		return helper(arr, target, 0);
+	}
+	
+	static int helper(int[] arr, int target, int index) {
+		if(index == arr.length) {
+			return -1;
+		}
+		if(arr[index] == target) {
+			return index;
+		}
+		else {
+			return helper(arr, target, index + 1);
+		}
+	}
+	
+	static ArrayList<Integer> list = new ArrayList<>();
+	static void findAllIndices(int[] arr, int target, int index) {
+		if(index == arr.length) {
+			return;
+		}
+		if(arr[index] == target) {
+			list.add(index);
+		}
+		findAllIndices(arr, target, index + 1);
+	}
+}

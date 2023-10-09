@@ -1,0 +1,38 @@
+package cyclicSort;
+
+import java.util.Arrays;
+
+public class SetMismatch {
+
+	public static void main(String[] args) {
+		int[] arr = {1, 1};
+		int[] nums = findErrorNums(arr);
+		System.out.println(Arrays.toString(nums));
+	}
+	
+	static int[] findErrorNums(int[] nums) {
+		int start = 0;
+		while(start < nums.length) {
+			int correct = nums[start] - 1;
+			if(nums[start] < nums.length && nums[start] != nums[correct]) {
+				swap(nums, start, correct);
+			}
+			else {
+				start++;
+			}
+		}
+		
+		for(int index = 0; index < nums.length; index++) {
+			if(nums[index] != (index + 1)) {
+				return new int[] {nums[index], (index + 1)};
+			}
+		}
+		return new int[] {-1, -1};
+	}
+	
+	static void swap(int[] arr, int start, int end) {
+		int temp = arr[start];
+		arr[start] = arr[end];
+		arr[end] = temp;
+	}
+}

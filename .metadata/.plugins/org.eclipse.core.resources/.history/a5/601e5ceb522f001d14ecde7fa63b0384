@@ -1,0 +1,20 @@
+package math_For_DSA;
+
+import java.util.Scanner;
+
+public class Factor_Of_A_Number {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		factors1(num);
+	}
+	
+	static void factors1(int num) {
+		for(int i = 1; i <= num; i++) {
+			if(num % i == 0) {
+				System.out.print(i + " ");
+			}
+		}
+	}
+}

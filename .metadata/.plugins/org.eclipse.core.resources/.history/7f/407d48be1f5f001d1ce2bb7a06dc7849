@@ -1,0 +1,35 @@
+package arrays_K;
+
+import java.util.Scanner;
+
+public class ContainerWIthMostWater {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int[] arr = new int[n];
+		
+		for(int i = 0; i < arr.length; i++) {
+			arr[i] = sc.nextInt();
+		}
+		int area = findMax(arr);
+		System.out.print(area);
+	}
+	
+	
+	public static int findMax(int[] arr) {
+		int height = 0;
+        int width = 0;
+        int water = 0;
+        int i = 0;
+        int j = arr.length - 1;
+        while(i < j){
+            height = arr[i] > arr[j] ? arr[j--] : arr[i++];
+            width = j - i;
+            if(height * width > water){
+                water = height * width;
+            }
+        }
+        return water;
+	}
+}

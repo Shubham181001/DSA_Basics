@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;nums&apos; in &apos;binary_Search.FirstAndLastPosition.search(...)&apos; to &apos;arr&apos;&#x0D;&#x0A;- Original project: &apos;arrays_K&apos;&#x0D;&#x0A;- Original element: &apos;binary_Search.FirstAndLastPosition.search(int[], int, boolean).nums&apos;&#x0D;&#x0A;- Renamed element: &apos;nums&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;nums&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;binary_Search{FirstAndLastPosition.java[FirstAndLastPosition~search~\[I~I~Z@nums!680!689!686!689!\[I!0!true" name="arr" references="true" stamp="1663124142048" version="1.0"/>
+</session>

@@ -1,0 +1,36 @@
+package recursion;
+
+import java.util.Scanner;
+
+
+// Program for recursive binary Search
+public class Binary_Search {
+
+	public static void main(String[] args) {
+		int[] arr = {5, 7, 9, 11, 134, 457};
+		Scanner sc = new Scanner(System.in);
+		int target = sc.nextInt();
+		int start = 0; 
+		int end = arr.length - 1;
+		int index = bin_Search(arr, target, start, end);
+		System.out.println("The target element: " + target + " is found at position : " + index);
+	}
+	
+	static int bin_Search(int[] arr, int target, int start, int end) {
+		if(start > end) {
+			return -1;
+		}
+		
+		int mid = start + (end - start) / 2;
+		
+		if(arr[mid] == target) {
+			return mid;
+		}
+		else if(target > arr[mid]) {
+			return bin_Search(arr, target, mid + 1, end);
+		}
+		else {
+			return bin_Search(arr, target, start, mid - 1);
+		}
+	}
+}

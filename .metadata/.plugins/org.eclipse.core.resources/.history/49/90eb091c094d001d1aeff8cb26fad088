@@ -1,0 +1,21 @@
+package fundamental;
+
+import java.util.Scanner;
+
+public class DecimalToBinary {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();//Decimal Number is taken as Input
+		String str = "";
+		while(n > 0) {
+			int rem = n % 2;
+			str += rem;
+			n /= 10;
+		}
+		
+		for(int i = str.length() - 1; i >= 0; i--) {
+			System.out.print(str.charAt(i));
+		}
+	}
+}

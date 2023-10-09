@@ -1,0 +1,21 @@
+package math_For_DSA;
+
+import java.util.Scanner;
+
+public class Power_Of_2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int res = n & (n - 1);
+		if(n == 0) {
+			System.out.println("It is not a power of 2");
+		}
+		else if(res == 0) {
+			System.out.print("The given number "+ n + " is a power of 2");
+		}
+		else {
+			System.out.print("The given number "+ n + " is not a power of 2");
+		}
+	}
+}

@@ -1,0 +1,31 @@
+package conditions_And_Loops;
+
+import java.util.Scanner;
+
+public class Loops {
+	
+	public static void main(String[] args) {
+		//Q: Print numbers from 1 to 5
+		
+//		int count = 1;
+//		while(count<=5)
+//		{
+//			System.out.println(count);
+//			count++;
+//		}
+		
+//		for(int count = 1; count <= 5; count++)
+//		{
+//			System.out.println(count);
+//		}
+		
+		//Print numbers from 1 to n
+		Scanner in = new Scanner(System.in);
+		int num = in.nextInt();
+		for(int i = 1; i <= n;i++)
+		{
+			System.out.println(i);
+		}
+	}
+
+}

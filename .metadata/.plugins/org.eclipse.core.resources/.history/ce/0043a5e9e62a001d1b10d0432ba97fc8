@@ -1,0 +1,24 @@
+package patterns_k;
+
+import java.util.Scanner;
+
+public class Pattern_11 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		pattern11(n);
+	}
+	
+	static void pattern11(int n) {
+		int originalN = n;
+		n = 2 * n;
+		for(int row = 1; row <= n; row++) {
+			for(int col = 1; col <= n; col++){
+				int atEveryIndex = originalN - Math.min(Math.min(row, col), Math.min(n - row + 1, n - col + 1));
+				System.out.print(atEveryIndex + " ");
+			}
+			System.out.println();
+		}
+	}
+}

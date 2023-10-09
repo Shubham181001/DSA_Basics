@@ -1,0 +1,25 @@
+package cyclicSort;
+
+public class AllDuplicatesInAnArray {
+
+	public static void main(String[] args) {
+		int[] arr = {4, 3, 2, 7, 8, 2, 3, 1};
+		List<Integer> nums = findDuplicates(arr);
+		System.out.println(nums);
+	}
+	
+	List<Integer> findDuplicates(int[] nums){
+		int start = 0;
+		while(start < nums.length) {
+			int correct = nums[start] - 1;
+			if(nums[start] != nums[correct]) {
+				swap(nums, start, correct);
+			}
+			else {
+				start++;
+			}
+		}
+		
+		List<Integer> var 
+	}
+}

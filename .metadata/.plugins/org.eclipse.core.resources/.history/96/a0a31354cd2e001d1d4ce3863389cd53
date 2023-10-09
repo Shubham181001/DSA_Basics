@@ -1,0 +1,36 @@
+package questions;
+
+public class MaximumConsecutive {
+
+	public static void main(String[] args) {
+		int[] arr = {47, 1, 48, 2, 49, 3, 50, 4, 51, 5, 52, 6, 53};
+		int res = max_Consecutive(arr);
+		System.out.println(res);
+	}
+	
+	static int max_Consecutive(int[] arr) {
+		int[] count = new int[arr.length];
+		int count1 = 0;
+		int temp = 0;
+		for(int i = 0; i <= arr.length - 1; i++)
+		{
+			if(i < arr.length - 1 && arr[i] == arr[i + 1] - 1) {
+				count1++;
+			}
+			else {
+				count[temp] = count1 + 1;
+				temp++;
+				count1 = 0;
+			}
+		}
+		
+		int max = -1;
+		for(int k = 0; k <= count.length - 1; k++) {
+			if(max <= count[k]) {
+				max = count[k];
+			}
+		}
+		
+		return max;
+	}
+}

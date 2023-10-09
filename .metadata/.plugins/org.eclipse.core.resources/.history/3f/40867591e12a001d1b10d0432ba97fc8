@@ -1,0 +1,21 @@
+package patterns_k;
+
+import java.util.Scanner;
+
+public class Pattern_16 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		pattern16(n);
+	}
+	
+	static void pattern16(int n) {
+		for(int row = 1; row <= n; row++) {
+			for(int col = 1; col <= row ; col++) {
+				System.out.print((char)('A' + col - 1));
+			}
+			System.out.println();
+		}
+	}
+}

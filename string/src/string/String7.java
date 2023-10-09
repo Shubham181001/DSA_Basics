@@ -1,0 +1,41 @@
+package string;
+
+import java.util.Scanner;
+
+public class String7 {
+
+	public static void main(String[] args) {
+		Scanner sc =  new Scanner(System.in);
+		String a = sc.next();
+		String b = sc.next();
+		boolean res = isSubsequence(a, b);
+		System.out.println(res);
+	}
+	
+	static boolean isSubsequence(String a, String b) {
+		int j = 0;
+		for(int i = 0; i <= a.length() - 1; i++) {
+			if(i <= a.length() - 2) {
+				for(; j <= b.length() - 1; j++) {
+					if(a.charAt(i) == b.charAt(j)) {
+						j += 1;
+						break;
+					}
+				}
+				
+				if(j > b.length() - 1) {
+					return false;
+				}
+			}
+			else {
+				for(; j <= b.length() - 1; j++) {
+					if(a.charAt(i) == b.charAt(j)) {
+						return true;
+					}
+				}
+				return false;
+			}
+		}
+		return true;
+	}
+}
